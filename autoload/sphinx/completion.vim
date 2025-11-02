@@ -1,12 +1,12 @@
-" sphinx.vim - Sphinx documentation utilities for Vim
+" completion.vim - Sphinx directive completion for Vim
 " Maintainer: sphinx-vim
 " Version: 0.1.0
 
 " Guard against multiple loads
-if exists('g:loaded_sphinx_autoload')
+if exists('g:loaded_sphinx_completion_autoload')
   finish
 endif
-let g:loaded_sphinx_autoload = 1
+let g:loaded_sphinx_completion_autoload = 1
 
 " Save cpoptions and set to vim defaults
 let s:save_cpo = &cpoptions
