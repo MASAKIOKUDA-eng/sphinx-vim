@@ -1,0 +1,15 @@
+=== DIAGNOSTIC ===
+
+Filetype: rst
+Omnifunc: sphinx#completion#complete
+Function exists: 1
+
+Current line: '.. cod'
+Cursor position: line=1 col=6
+
+findstart result: 3
+✓ findstart OK
+matches for 'cod': 2
+✓ Got matches!
+  - code-block::
+  - codeauthor::
