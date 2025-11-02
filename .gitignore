@@ -3,6 +3,9 @@
 *.swo
 *~
 
+# Backup files
+*.bak
+
 # Test output files
 test_results.txt
 verification_results.txt

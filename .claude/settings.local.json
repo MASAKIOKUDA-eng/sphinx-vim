@@ -7,7 +7,8 @@
       "Bash(echo:*)",
       "Bash(printf:*)",
       "Bash(test.rst)",
-      "Bash(timeout 10 vim:*)"
+      "Bash(timeout 10 vim:*)",
+      "Bash(test:*)"
     ],
     "deny": [],
     "ask": []
