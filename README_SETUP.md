@@ -11,14 +11,14 @@
 ### 方法1: テストスクリプトを使う
 
 ```cmd
-cd C:\Users\inuin\OneDrive\ドキュメント\GitHub\sphinx-vim
+cd /path/to/sphinx-vim
 QUICK_START_REAL.bat
 ```
 
 または
 
 ```cmd
-cd C:\Users\inuin\OneDrive\ドキュメント\GitHub\sphinx-vim
+cd /path/to/sphinx-vim
 vim -u test_insert_mode.vim
 ```
 
@@ -33,8 +33,10 @@ Vimが開いたら：
 ### 方法2: 最小設定で起動
 
 ```cmd
-vim -u NONE -c "set rtp+=C:/Users/inuin/OneDrive/ドキュメント/GitHub/sphinx-vim" -c "filetype plugin on" test.rst
+vim -u NONE -c "set rtp+=/path/to/sphinx-vim" -c "filetype plugin on" test.rst
 ```
+
+**注**: `/path/to/sphinx-vim` を実際のパスに置き換えてください。
 
 Vim内で：
 ```vim
@@ -48,9 +50,9 @@ Vim内で：
 ### Windows (.vimrc の場所)
 
 Vimの設定ファイルは以下のいずれか：
-- `C:\Users\inuin\_vimrc`
-- `C:\Users\inuin\.vimrc`
 - `%USERPROFILE%\_vimrc`
+- `%USERPROFILE%\.vimrc`
+- `C:\Users\<ユーザー名>\_vimrc`
 
 **確認方法**（Vim内で）：
 ```vim
@@ -67,11 +69,20 @@ set nocompatible
 filetype plugin on
 syntax on
 
-" sphinx-vim を読み込む
-set runtimepath+=C:/Users/inuin/OneDrive/ドキュメント/GitHub/sphinx-vim
+" sphinx-vim を読み込む（実際のパスに変更してください）
+set runtimepath+=/path/to/sphinx-vim
 ```
 
-**重要**: パスは環境に合わせて変更してください。
+**重要**: `/path/to/sphinx-vim` を実際のパスに変更してください。
+
+**例**:
+```vim
+" Windows の場合
+set runtimepath+=C:/Users/YourName/Documents/sphinx-vim
+
+" Linux/Mac の場合
+set runtimepath+=~/projects/sphinx-vim
+```
 
 ### 設定を反映
 
@@ -122,21 +133,37 @@ Vim内で実行：
 ```
 
 何も表示されない場合は、作成します：
+
+**Windows**:
 ```cmd
 notepad %USERPROFILE%\_vimrc
+```
+
+**Linux/Mac**:
+```bash
+vim ~/.vimrc
 ```
 
 上記の設定内容を貼り付けて保存。
 
 ## 最も簡単な.vimrc
 
-以下をコピー＆ペーストするだけ：
+以下をコピー＆ペーストするだけ（**パスは要変更**）：
 
 ```vim
 set nocompatible
 filetype plugin on
 syntax on
-set runtimepath+=C:/Users/inuin/OneDrive/ドキュメント/GitHub/sphinx-vim
+set runtimepath+=/path/to/sphinx-vim
+```
+
+**実際の例**:
+```vim
+" Windows
+set runtimepath+=C:/Users/YourName/Documents/sphinx-vim
+
+" Linux/Mac
+set runtimepath+=~/projects/sphinx-vim
 ```
 
 これだけで動きます！

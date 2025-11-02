@@ -16,6 +16,15 @@ call plug#end()
 filetype plugin on
 ```
 
+**例**:
+```vim
+" Windows
+Plug 'C:/Users/YourName/Documents/sphinx-vim'
+
+" Linux/Mac
+Plug '~/projects/sphinx-vim'
+```
+
 保存後、Vimを再起動して `:PlugInstall` を実行。
 
 ### dein.vim
@@ -43,25 +52,42 @@ filetype plugin on
 `.vimrc` または `init.vim` に以下を追加：
 
 ```vim
-" sphinx-vimをruntimepathに追加
-set runtimepath+=C:/Users/inuin/OneDrive/ドキュメント/GitHub/sphinx-vim
+" sphinx-vimをruntimepathに追加（実際のパスに変更）
+set runtimepath+=/path/to/sphinx-vim
 
 " filetypeプラグインを有効化（必須）
 filetype plugin on
+```
+
+**例**:
+```vim
+" Windows
+set runtimepath+=C:/Users/YourName/Documents/sphinx-vim
+
+" Linux/Mac
+set runtimepath+=~/projects/sphinx-vim
 ```
 
 **重要**: `filetype plugin on` がないと、ftpluginが読み込まれず、omnifuncが設定されません。
 
 ## 方法3: Vimのプラグインディレクトリにコピー
 
-Windowsの場合：
+プラグインディレクトリにファイルを直接コピーします。
+
+**Windows**:
 ```cmd
-xcopy /E /I sphinx-vim %USERPROFILE%\vimfiles
+cd /path/to/sphinx-vim
+xcopy /E /I autoload %USERPROFILE%\vimfiles\autoload
+xcopy /E /I ftdetect %USERPROFILE%\vimfiles\ftdetect
+xcopy /E /I ftplugin %USERPROFILE%\vimfiles\ftplugin
 ```
 
-Linux/Macの場合：
+**Linux/Mac**:
 ```bash
-cp -r sphinx-vim ~/.vim/
+cd /path/to/sphinx-vim
+cp -r autoload ~/.vim/
+cp -r ftdetect ~/.vim/
+cp -r ftplugin ~/.vim/
 ```
 
 その後、`.vimrc` に追加：
