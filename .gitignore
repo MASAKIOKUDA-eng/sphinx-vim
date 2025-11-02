@@ -1,0 +1,20 @@
+# Vim swap files
+*.swp
+*.swo
+*~
+
+# Test output files
+test_results.txt
+verification_results.txt
+diagnostic_output.txt
+
+# Temporary test files
+manual_test.vim
+verification_test.vim
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# User-specific settings
+.claude/settings.local.json

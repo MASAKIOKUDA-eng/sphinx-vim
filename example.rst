@@ -48,7 +48,7 @@ The completion includes 55+ common Sphinx directives, including:
 Try it yourself below
 ---------------------
 
-..
+.. 
 
 .. codeauthor::
 

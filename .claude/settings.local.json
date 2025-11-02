@@ -3,7 +3,10 @@
     "allow": [
       "Bash(vim:*)",
       "Bash(cat:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(echo:*)",
+      "Bash(printf:*)",
+      "Bash(test.rst)"
     ],
     "deny": [],
     "ask": []

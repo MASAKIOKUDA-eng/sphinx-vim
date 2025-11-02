@@ -62,10 +62,12 @@ vim -u run_tests.vim -N -n -i NONE
 ```
 sphinx-vim/
 ├── autoload/sphinx/completion.vim  # 補完機能の実装
+├── ftdetect/rst.vim                # reStructuredTextファイルタイプ検出
 ├── ftplugin/rst.vim                # reStructuredText設定
 ├── demo.vim                        # 対話的デモ
 ├── run_tests.vim                   # 自動テスト
 ├── example.rst                     # 使用例
+├── .gitignore                      # Git除外設定
 ├── QUICKSTART.md                   # クイックスタートガイド
 └── USAGE.md                        # 詳細な使用方法
 ```
